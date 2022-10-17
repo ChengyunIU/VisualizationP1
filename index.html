@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+    <title>Project 1 Cholera</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="./index.js"></script>
+    <style>
+        body {
+            background-color: #E4E7C8;
+            text-align: center
+        }
+
+        .content {
+            width: 70%;
+            margin-left: 15%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            background-color: #fff;
+            border-radius: 15px;
+        }
+
+        svg {
+            width: 100%;
+        }
+
+        .street-path {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 1.5px;
+        }
+
+        .pumps1 {
+            fill: #000000;
+        }
+
+        .pumps2 {
+            fill: none;
+            stroke: #ff000d;
+            stroke-width: 3px;
+        }
+
+        #tooltip {
+            font-family: Georgia;
+            font-size: 18px;
+            width: auto;
+            height: auto;
+            position: absolute;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            border: #ccc 1px solid;
+        }
+
+        .legend-text {
+            font-family: Georgia;
+            font-size: 8px;
+            font-weight: bold;
+        }
+
+        .legend-text2 {
+            font-family: Georgia;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .svg-title {
+            font-family: Georgia;
+            font-size: 22px;
+            text-anchor: middle;
+            font-weight: bold;
+        }
+
+        .street-name{
+            font-family: Georgia;
+            text-anchor: middle;
+            fill: #e7298a;
+            font-weight: bold;
+        }
+
+
+        /*  */
+        .pagetitle {
+            font-size: 28px;
+            margin-left:10px;
+            font-family: Georgia;
+            font-weight: bold;
+        }
+
+        .pagetext {
+            font-size: 18px;
+            margin-left:15px;
+            margin-right:15px;
+            font-family: Georgia;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="content">
+        <div class="pagetitle" style="float: left;">Cholera Outbreak: London, 1854</div>
+        <div style="float: right;">
+            <form>
+                <input class="pagebutton" type="button" value="Documentation" onclick="window.location.href='about.html'" />
+            </form>
+        </div>
+        <br /><br />
+        <div class="pagetext">
+            <p>
+                Cholera was a major global scourge in the 19th century. John Snow conducted pioneering investigations on
+                cholera epidemics in England and particularly in London. In 1854, he demonstrated that contaminated
+                water was the key source of the epidemics by a map. He concluded that contaminated water from the Broad
+                Street pump was the source of the disease and, consequently, the removal of the handle led to cessation
+                of the epidemic. 
+            </p>
+            <p>
+                The age of the subjects are divided in to 5 groups: "0-10", "11-20", "21-40", "41-60", "61-80", ">80", 
+                which are labeled as "Age 0", "Age 1", "Age 2", "Age 3", "Age 4" and "Age 5" spectively. 
+                <a href=" ">Click here for demonstration of the map. </a>
+            </p>
+        </div>
+
+        <div style="margin-top:35px;">
+            <svg id="svg1" style="width:60%"> </svg>
+            <svg id="svg2" style="height:250px"> </svg>
+            <svg id="svg3" style="height:300px"> </svg>
+        </div>
+    </div>
+
+
+    <div id="tooltip" style="display: none;"></div>
+</body>
+
+</html>
